@@ -1,0 +1,7 @@
+interface:
+  display_name: "Google AI Ecosystem"
+  short_description: "Route Antigravity engineering and Gemini media"
+  default_prompt: "Use $google-ai-ecosystem to route this request to Antigravity for repository work or Gemini for research and media, then verify the result."
+
+policy:
+  allow_implicit_invocation: true

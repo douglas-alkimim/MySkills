@@ -1,0 +1,7 @@
+interface:
+  display_name: "Wave-Oriented Planning"
+  short_description: "Plan and govern work in sequential waves."
+  default_prompt: "Use $wop to create or manage a durable plan with strict wave gates, traceability, evidence, and lifecycle integrity."
+
+policy:
+  allow_implicit_invocation: true

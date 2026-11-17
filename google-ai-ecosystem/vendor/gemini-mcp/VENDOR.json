@@ -1,0 +1,29 @@
+{
+  "source": "https://github.com/BowTiedSwan/gemini-mcp",
+  "upstream_commit": "e34d084d70406c81b3fefb4200241fe44984f7ba",
+  "upstream_version": "1.0.0",
+  "local_version": "2.0.0",
+  "vendored_on": "2026-11-16",
+  "tree_sha256": "9f744296937a201de033ef5efaf05c821504a1a91be4dd4b163361c412a7b492",
+  "tree_hash_excludes": [
+    "VENDOR.json",
+    "dist/",
+    "node_modules/",
+    ".git/",
+    "coverage/"
+  ],
+  "provenance_note": "The current upstream HEAD was recorded on 2026-11-16. Exact ancestry between this vendored baseline and that commit was not independently verified; treat baseline equivalence as NOT_VERIFIED.",
+  "package_manager": "pnpm",
+  "local_changes": [
+    "Breaking removal of automatic email/password login configuration; manual visible setup is the only bootstrap and repair path",
+    "Fail-closed standard/full tool authorization enforced at discovery and call time",
+    "Manual-only recoverable authentication, explicit account-switch receipts, and hardened session storage",
+    "MCP-owned cleanup scope with preview, state binding, expiry, and single-use receipts",
+    "Transparent deterministic browser policy without concealment or fingerprint spoofing",
+    "Generated image and video download support with reference-image attachments",
+    "Transactional Codex registration and consent-gated Chrome installation",
+    "Finite unit, lifecycle, package, provenance, and sanitized real-session smoke harnesses",
+    "Private Google AI Ecosystem package identity with upstream attribution retained in LICENSE and VENDOR.json",
+    "MCP-client-neutral runtime descriptions in place of host-specific promotional wording"
+  ]
+}

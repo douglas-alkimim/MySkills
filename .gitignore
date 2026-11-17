@@ -1,0 +1,68 @@
+# Project-local runtime and host state
+/.codex/
+/.wop/
+/.google-ai-ecosystem/
+/gemini-output/
+/.skill-validation-deps/
+/release-artifacts/
+
+# Node.js, pnpm, package-manager caches, and generated builds
+**/node_modules/
+**/.pnpm-store/
+**/.npm/
+**/.yarn/cache/
+**/.yarn/unplugged/
+**/dist/
+**/build/
+**/out/
+**/coverage/
+**/.nyc_output/
+**/.turbo/
+**/*.tsbuildinfo
+
+# Python caches, environments, and test/tool state
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.tox/
+**/.nox/
+**/.venv/
+**/venv/
+**/virtualenv/
+
+# Environment files; documented examples remain publishable
+**/.env
+**/.env.*
+!**/.env.example
+!**/.env.*.example
+
+# Managed browser, authentication, session, and runtime state (never source)
+**/.auth/
+**/auth_state/
+**/browser_state/
+**/chrome_profile/
+**/chrome_profile_instances/
+**/session_state/
+**/.google-ai-ecosystem-runtime.json
+
+# Logs, local databases, temporary workspaces, and package artifacts
+**/*.log
+**/logs/
+**/*.db
+**/*.sqlite
+**/*.sqlite3
+**/.tmp/
+**/tmp/
+**/temp/
+**/*.tmp
+**/*.temp
+**/*.tgz
+**/*.zip
+
+# Private keys and certificate bundles
+**/*.pem
+**/*.p12
+**/*.pfx
+**/*.key

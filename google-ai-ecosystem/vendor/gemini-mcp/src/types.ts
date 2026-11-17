@@ -1,0 +1,90 @@
+/**
+ * Global type definitions for Gemini App MCP Server
+ */
+
+/**
+ * Session information returned by the API
+ */
+export interface SessionInfo {
+  id: string;
+  created_at: number;
+  last_activity: number;
+  age_seconds: number;
+  inactive_seconds: number;
+  message_count: number;
+  gemini_url: string;
+}
+
+/**
+ * Result from asking a question
+ */
+export interface AskQuestionResult {
+  status: "success" | "error";
+  question: string;
+  answer?: string;
+  error?: string;
+  gemini_url: string;
+  session_id?: string;
+  session_info?: {
+    age_seconds: number;
+    message_count: number;
+    last_activity: number;
+  };
+}
+
+/**
+ * Tool call result for MCP (generic wrapper for tool responses)
+ */
+export interface ToolResult<T = any> {
+  success: boolean;
+  data?: T;
+  error?: string;
+  code?: string;
+  auth_status?: "unconfigured" | "valid" | "repairable" | "expired" | "switch_requested" | "failed_recoverable";
+  recommended_action?: string;
+  retryable?: boolean;
+  observed_service_message?: string;
+}
+
+/**
+ * MCP Tool definition
+ */
+export interface Tool {
+  name: string;
+  title?: string;
+  description: string;
+  inputSchema: {
+    type: "object";
+    properties: Record<string, any>;
+    required?: string[];
+  };
+}
+
+/**
+ * Options for waiting for answers
+ */
+export interface WaitForAnswerOptions {
+  question?: string;
+  timeoutMs?: number;
+  pollIntervalMs?: number;
+  ignoreTexts?: string[];
+  debug?: boolean;
+}
+
+/**
+ * Progress callback function for MCP progress notifications
+ */
+export type ProgressCallback = (
+  message: string,
+  progress?: number,
+  total?: number
+) => Promise<void>;
+
+/**
+ * Global state for the server
+ */
+export interface ServerState {
+  playwright: any;
+  sessionManager: any;
+  authManager: any;
+}
